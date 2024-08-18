@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,8 +17,30 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body className={inter.className}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <nav className="flex w-full lg:max-w-4xl flex-col p-24 pb-0">
+            <ul className="flex">
+              <li>
+                <Link href={"/"}>home</Link>
+              </li>
+              <li className="ml-4">
+                <Link href={"/blog"}>blog</Link>
+              </li>
+            </ul>
+          </nav>
+          {children}
+          <footer className="flex w-full lg:max-w-4xl flex-col p-24 pt-0">
+            &copy; 2024 molezov
+          </footer>
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
