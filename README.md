@@ -1,3 +1,9 @@
+If you need an explanation, add the details.
+
+![github-asondeneru-receipt-2024-09-23](https://github.com/user-attachments/assets/2ffbfa1d-7a1c-4e83-a029-7d69177b0281)
+![github-asondeneru-receipt-2024-10-23](https://github.com/user-attachments/assets/382e793f-6671-4de3-8139-1bae8198e303)
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
